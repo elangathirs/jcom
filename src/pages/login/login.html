@@ -1,0 +1,59 @@
+<ion-content>
+
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+
+        <div class="center-div" text-center>
+          <div class="main-logo">
+            <img src="assets/imgs/jcom_logo.png" alt="">
+          </div>
+
+          <ion-list>
+
+            <ion-item>
+              <ion-label>
+                <ion-icon name="ios-call"></ion-icon>
+              </ion-label>
+              <ion-input type="tel" placeholder="Mobile Number" [(ngModel)]="number" pattern="[0-9]*" maxlength="10">
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>
+                <ion-icon name="ios-key"></ion-icon>
+              </ion-label>
+              <ion-input [type]="passwordType" placeholder="Enter Password" [(ngModel)]="password" maxlength="20"></ion-input>
+              <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+            </ion-item>
+
+            <ion-item>
+              <ion-label style="width: 35px !important;">
+                <ion-icon name="ios-contacts"></ion-icon>
+              </ion-label>
+              <ion-select placeholder="Meeting Type" [(ngModel)]="meetingType">
+                <div *ngFor="let data of meeting_type">
+                  <ion-option value="{{data.meeting_type}}">{{data.meeting_type_name}}</ion-option>
+                </div>
+              </ion-select>
+            </ion-item>
+
+          </ion-list>
+
+          <div class="login-button">
+            <button (click)="login()" ion-button>Login</button>
+          </div>
+        </div>
+
+        <p (click)="forget()" style="text-align: center;">Forget Password</p>
+        <p *ngIf="registration == 1"  class="nav">Don't have an account?</p>
+
+        <div *ngIf="registration == 1" class="login-button">
+          <button (click)="reg()" ion-button>Signup Now</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,203 @@
+page-home {
+      .toolbar-title-ios {
+            padding: 0 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            // position: relative;
+            // right: 25px;
+        }
+        .content-ios{
+            background-color: #1e4b60;
+            color: #fff;
+        }
+    ////////////////////////////////////////
+ 
+    .overlap{
+        position: relative;
+        bottom: 75px;
+    }
+
+    .box{
+        display: flex;
+      text-align: center;
+    //   height: 8rem;
+    //   background: #fbfbfb14;
+    //   border: 1px solid #ffffff38;
+      background: #3f6577;
+      border: 1px solid #66a7c5;
+      padding: 0;
+      margin: 5px;
+      border-radius: 3px;
+      width: 45%;
+      margin: 0px auto;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .box p{
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    .grade{
+        width: 33px;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+    }
+    .profile{
+        display: flex;
+
+    }
+    .middle{
+        text-align: center;
+        width: 80%;
+    }
+    .middle img{
+        width: 100px;
+        height: 100px;
+        border: 3px solid orange;
+        border-radius: 60px;
+        position: relative;
+        bottom: 90px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .middle p{
+        position: relative;
+        bottom: 90px;
+        color: orange;    
+    }
+
+    .start{
+        width: 20%;
+        text-align: center;
+        position: relative;
+        left: 20px;
+    }
+    .start p{
+        margin: 0;
+    }
+    .start ion-icon{
+        font-size: 3rem;
+        color: orange;
+    }
+    .end{
+        width: 20%;
+        text-align: center;
+        position: relative;
+        right: 20px;
+    }
+    .end p{
+        margin: 0;
+    }
+    .end ion-icon{
+        font-size: 3rem;
+        color: orange;
+    }
+
+    /////////////////////////////////////segment custom
+
+    .segment-ios .segment-button.activated, .segment-ios .segment-button.segment-activated {
+        border-color: #3b6274 !important;
+        background-color: #3b6274 !important;
+        opacity: 1;
+    }
+    .segment-ios .segment-button {
+        color: #69aac7;
+        border-color: #3b6274;
+    }
+
+    ion-slides{
+        padding: 10px 0px;
+        margin: 10px 0;
+    }
+    .row{
+        width: 90%;
+        margin: 0px auto;
+        background-color: #fff;
+        color: black;
+        border-radius: 2px;
+    }
+    .row p{
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        border-bottom: 2px solid #3b6274;
+        color: black;
+        font-weight: 500;
+        
+    }
+    .row .left{
+        width: 60%;
+        text-align: left
+    }
+    .row .right{
+        width: 40%;
+        text-align: right
+    }
+
+    .green{
+        color: #035a03 !important;
+        font-weight: 600 !important;
+    }
+    .met p{
+        margin: 5px 10px;
+        background: #fff;
+        color: gray;
+        font-size: 1.4rem;
+        padding: 10px 10px;
+    }
+    .flex{
+        display: flex;
+        width: 95%;
+        margin: 0px auto;
+    }
+
+    .box ion-icon{
+        font-size: 2.5rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .rs{
+        font-size: 3rem;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /////////////////////////final touch
+    .jib-flex{
+        display: flex;
+        width: 90%;
+        margin: 0px auto;
+    }
+    .jib-option{
+        display: flex;
+        margin: 0px auto;
+        text-align: center;
+        background: #3f6577;
+        border: 1px solid #66a7c5;
+        padding: 10px 15px;
+        border-radius: 3px;
+        width: 50%;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+    }
+    .jib-option p{
+        margin: 0;
+        padding: 1px 0px;
+    }
+    .jib-option span{
+        padding: 1px 4px;
+    }
+    .coin{
+        margin: 0 6px 0 5px !important;
+        padding: 0px !important;
+
+    }
+
+}

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Guest History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let item of guest_history">
+
+    <ion-card>
+
+      <div class="flex">
+
+        <div class="left">
+          <p>{{item.date}}</p>
+
+        </div>
+
+
+        <div class="center">
+          <P class="name">{{item.guest_name}}</P>
+        </div>
+
+        <div class="center">
+          <P class="name">{{item.mobile_no}}</P>
+        </div>
+
+
+        <div class="right" style="color: green !important;" *ngIf="item.status == 'Present'">
+          <!-- <ion-icon class="rotate1" name="arrow-up"></ion-icon> -->
+          <div class="rotate1" >P</div>
+        </div>
+        <div class="right" style="color: red !important;" *ngIf="item.status != 'Present'">
+            <!-- <ion-icon class="rotate2" name="arrow-up"></ion-icon> -->
+          <div class="rotate2" >A</div>
+          </div>
+      </div>
+
+      <div style="padding-left: 14px;" >
+        <p> <b> Email : </b> {{item.email_id}}</p>
+      </div>
+
+      <div style="padding-left: 14px;">
+        <p> <b> City  : </b> {{item.city}}</p>
+      </div>
+
+      <div style="padding-left: 14px;">
+        <p> <b> Category : </b> {{item.business_category}}</p>
+      </div> 
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

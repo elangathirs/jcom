@@ -1,0 +1,162 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Your Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content *ngFor="let item of profiledata">
+
+  <div class="dp" style="height: 360px; text-align:center;" >
+    <!-- (click)="image()" -->
+    <img src="https://admin.jcombiz.com/{{item.profile_photo}}" alt="">
+  </div>
+  <div class="tint">
+    <p class="t-name">{{item.title}} - {{item.name}}</p>
+    <p class="t-company">{{item.business_name}}</p>
+    <p class="t-work">Classification :
+      <span>{{item.business_category}}</span>
+    </p>
+    <p class="t-work">Valid Upto :
+      <span>{{item.membership_expiry}}</span>
+    </p>
+    <!-- <p class="t-work">
+      <button style="color: white !important;" *ngIf="item.membership_renewal" (click)="renew(item.membership_amount)" ion-button>Renew Now</button>
+    </p> -->
+    <ion-grid size="12"><ion-row>
+      <ion-col class="Renew">
+        <button *ngIf="item.membership_renewal" (click)="renew(item.membership_amount)" ion-button>Renew Now</button>
+      </ion-col> 
+    </ion-row></ion-grid>
+    
+  </div>
+
+
+  <div class="overlap">
+
+    <ion-card>
+      <ion-card-header>
+        Address
+        <!-- <ion-icon name="ios-create-outline" (click)="editprofile()"></ion-icon> -->
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label fixed>Business Name</ion-label>
+          <ion-input type="text" placeholder="Business Name" value="{{item.business_name}}" [(ngModel)] = "business_name"></ion-input>
+        </ion-item>
+        <ion-item class="textin">
+          <ion-label fixed>Address</ion-label>
+          <ion-textarea type="text" style="height: 100px;" placeholder="Address" value="{{item.address}}" [(ngModel)] = "address">
+          </ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Pin</ion-label>
+          <ion-input type="tel" placeholder="Pincode" value="{{item.pincode}}" (ionChange)="pinChange()" [(ngModel)] = "pincode"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>City/Town</ion-label>
+          <ion-input type="text" placeholder="Your City/Town" value="{{item.city}}" [(ngModel)] = "city"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>District</ion-label>
+          <ion-input type="text" placeholder="Your District" value="{{item.district}}" [(ngModel)] = "district"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>State</ion-label>
+          <ion-input type="text" placeholder="Your State" value="{{item.state}}" [(ngModel)] = "state"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Country</ion-label>
+          <ion-input type="text" placeholder="Your State" value="{{item.country}}" [readonly]=true></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Zone</ion-label>
+          <ion-input type="text" placeholder="Your State" value="{{item.zone}}" [readonly]=true></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>LOM</ion-label>
+          <ion-input type="text" placeholder="Your State" value="{{item.lom}}" [readonly]=true></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>JCOM Table</ion-label>
+          <ion-input type="text" placeholder="Your State" value="{{item.jib_table}}" [readonly]=true></ion-input>
+        </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Contact
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label fixed>Business No :</ion-label>
+          <ion-input type="text" placeholder="Tele-Number" value="{{item.b_mobile_no}}" [(ngModel)] = "b_mobile_no"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Personal No :</ion-label>
+          <ion-input type="text" placeholder="Mobile Number" value="{{item.p_mobile_no}}" [readonly]=true></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Business Mail</ion-label>
+          <ion-input type="text" placeholder="E-Mail" value="{{item.b_email_id}}" [(ngModel)] = "b_email_id"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Personal Mail</ion-label>
+          <ion-input type="text" placeholder="E-Mail" value="{{item.p_email_id}}" [readonly]=true></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Website</ion-label>
+          <ion-input type="text" placeholder="Website Link" value="{{item.website}}" [(ngModel)] = "website"></ion-input>
+        </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+
+    <p class="labl">Business Information</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Business Discription" value="{{item.business_info}}" [(ngModel)] = "business_info">
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <p class="labl">Business Keywords</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Business Keywords" value="{{item.business_keywords}}" [(ngModel)] = "business_keywords">
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <p class="labl">Products</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Products" value="{{item.products}}" [(ngModel)] = "products" >
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <p class="labl">Needed Contacts</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Needed Contacts" value="{{item.needed_contacts}}" [(ngModel)] = "needed_contacts">
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+  </div>
+
+  <div class="conf-btn">
+    <button ion-button (click)="save()">
+      Save
+    </button>
+  </div>
+
+
+
+</ion-content>

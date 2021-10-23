@@ -1,0 +1,42 @@
+<ion-content padding>
+
+  <!-- {{scoredata.month}} Score
+  Attendance Score : {{scoredata.attendance_score}}
+  Connect Score : {{scoredata.connect_score}}
+  Gnote Score : {{scoredata.gnote_score}}
+  You & Me Score : {{scoredata.youandme_score}}
+  Guest Score : {{scoredata.guest_score}}
+  Total score : {{scoredata.total_score}} -->
+
+  <div class="flexs">
+    <div class="lefts">
+      <p class="caps orange">{{scoredata.month}}</p>
+      <p>Attendance Score:</p>
+      <p>Connect Score:</p>
+      <p>Gnote Score:</p>
+      <!-- <p>You & Me Score:</p> -->
+      <p>Showcase Score:</p>
+      <p>Guest Score:</p>
+      <p>Total Score:</p>
+    </div>
+    <div class="rights">
+      <p>Score</p>
+      <p>{{scoredata.attendance_score}}</p>
+      <p>{{scoredata.connect_score}}</p>
+      <p>{{scoredata.gnote_score}}</p>
+      <p>{{scoredata.youandme_score}}</p>
+      <p>{{scoredata.guest_score}}</p>
+      <p class="orange">{{scoredata.total_score}}</p>
+    </div>
+  </div>
+
+  <div class="bs">
+    <img src="{{scoredata.batch_pic}}" alt="">
+  </div>
+  
+
+</ion-content>
+
+<ion-footer>
+  <button class="close" ion-button full (click)="close()">Close</button>
+</ion-footer>

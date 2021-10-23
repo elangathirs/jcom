@@ -1,0 +1,211 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Connect Entry</ion-title>
+    <div class="ic">
+      <ion-icon (click)="hconnect()" name="list-box"></ion-icon>
+    </div>
+    <!-- <div style="float: right;position: relative;right: 8px;bottom: 7px;color: white;" > -->
+    <div class="ic" >
+      <ion-icon class="ic-ref" (click)="pending_connect()" name="ios-timer-outline"></ion-icon>
+    </div>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="albums"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder="Select Table " [(ngModel)]="table" [items]="tables"
+        itemValueField="table" itemTextField="table_name"  (onChange)="loadTable($event)" [canSearch]="true">
+      </select-searchable>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="person-add"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder="Connect To" [(ngModel)]="member" [items]="memberslist"
+        itemValueField="id" itemTextField="name" [canSearch]="true">
+      </select-searchable>
+      <!-- (onChange)="portChange($event)" -->
+    </div>
+  </div>
+
+  <p class="label">Connect Type</p>
+  <div class="flex">
+    <ion-row class="radio-btn" radio-group [(ngModel)]="ctype">
+      <ion-col>
+        <ion-item>
+          <ion-label>JCOM</ion-label>
+          <ion-radio value="1" (click)="jib()"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>JCI</ion-label>
+          <ion-radio value="2" (click)="jib()"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Non-JCI</ion-label>
+          <ion-radio value="3" (click)="jib()"></ion-radio>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="hideMe">
+    <p class="label">Connect Status</p>
+    <div class="flex">
+      <!-- <button ion-button class="new-btn">Within JIB</button>
+    <button ion-button class="new-btn">Within JCI - JIB </button> -->
+      <ion-row class="radio-btn" radio-group [(ngModel)]="cstatus">
+        <ion-col>
+          <ion-item>
+            <ion-label>Self Connect</ion-label>
+            <!-- <ion-label>Within JCOM</ion-label> -->
+            <ion-radio value="1" (click)="withjib()"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>Within JCI - JCOM</ion-label>
+            <ion-radio value="2" (click)="withnojib()"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-briefcase"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder="Business Category" [(ngModel)]="buisness"
+        [items]="buisnessdata" itemValueField="id" itemTextField="category" [canSearch]="true">
+      </select-searchable>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab" (click)="getContacts()">
+      <ion-icon name="ios-phone-portrait"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <!-- [readonly]=true -->
+        <ion-input type="text" placeholder="From Phone Book" [(ngModel)]="name"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-call"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="tel" placeholder="Mobile Number" pattern="[0-9]*" [(ngModel)]="number"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <form novalidate (ngSubmit)="signup()" [formGroup]="signupform">
+    <div class="rows">
+      <div class="lab">
+        <ion-icon name="ios-mail"></ion-icon>
+      </div>
+      <div class="inp">
+        <ion-item>
+          <ion-input type="email" placeholder="E-Mail" [(ngModel)]="email" formControlName="email"
+            [class.error1]="!signupform.controls.email.valid && signupform.controls.email.dirty"></ion-input>
+        </ion-item>
+        <!-- <ion-item no-lines *ngIf="( signupform.get('email').hasError('minlength') || signupform.get('email').hasError('pattern') ||signupform.get('email').hasError('required') ) && signupform.get('email').touched">
+          <div class="error" *ngIf="signupform.get('email').hasError('required') && signupform.get('email').touched" >
+              Fill the email
+          </div>
+          <div class="error" *ngIf="signupform.get('email').hasError('pattern') && signupform.get('email').touched">
+              Email address invalid
+          </div>
+        </ion-item> -->
+      </div>
+    </div>
+  </form>
+
+  <div class="comment">
+    <ion-item>
+      <ion-textarea placeholder="Address " [(ngModel)]="address">
+      </ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="comment">
+    <ion-item>
+      <ion-textarea placeholder="comments " [(ngModel)]="comments">
+      </ion-textarea>
+    </ion-item>
+  </div>
+
+  <p class="label">How about this Connect ?</p>
+
+  <div class="range">
+    <div class="total-range"></div>
+      <ion-row class="radio-btn" radio-group [(ngModel)]="range">
+        <div class="individual-hot">
+          <ion-icon *ngIf="range == 1" ios="ios-checkmark" md="md-checkmark"></ion-icon>
+          <ion-col class="hot">
+            <ion-item>
+              <ion-label>Hot</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </div>
+        <div class="individual-med">
+          <ion-icon *ngIf="range == 2" ios="ios-checkmark" md="md-checkmark"></ion-icon>
+          <ion-col class="med">
+            <ion-item>
+              <ion-label>Medium</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </div>
+        <div class="individual-cold">
+          <ion-icon *ngIf="range == 3" ios="ios-checkmark" md="md-checkmark"></ion-icon>
+          <ion-col class="cold">
+            <ion-item>
+              <ion-label>Cold</ion-label>
+              <ion-radio value="3"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </div>
+      </ion-row>
+    </div>
+  <!-- </div> -->
+
+  <div class="conf-btn">
+    <button ion-button (click)="confirm()">
+      Confirm
+    </button>
+  </div>
+
+</ion-content>
+
+<!-- <style type="text/css">
+  .error {
+    color: rgb(223, 62, 62);
+    font-size: 11px;
+  }
+
+  .error1 {
+    color: rgb(75, 75, 75);
+    border-bottom: 1px solid #ff0000;
+  } -->

@@ -1,0 +1,236 @@
+page-register {
+
+    .item-ios ion-icon[item-end] {
+        margin-left: 0;
+        margin-top: 8px !important;
+        margin-bottom: 0 !important;
+        font-size: 20px;
+        color: #999999;
+    }
+
+    .input-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 85% !important;
+        height: 100%;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    }
+
+    .item-ios [item-end] {
+        margin: 8px 8px 9px 0;
+    }
+    
+    .toolbar-title-ios {
+        padding: 0 15px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: left;
+        // position: relative;
+        // right: 25px;
+        // top: 11px;
+    }
+
+    .content-ios{
+        background-color: #1e4b60;
+        color: #fff;
+    }
+
+    .logo_img{
+        width: 100%;
+    }
+
+    .center-div{
+        margin:13px 8px 13px 18px;
+
+        ::placeholder{
+            color: #999;
+        }
+
+        ion-input{
+            text-align: center !important;
+        }
+
+        .label-ios{
+            background-color: #3b6274 ;
+            width: 42px;
+            height: 45px;
+            margin: 0px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ion-icon{
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .item-ios {
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 1.5rem;
+        color: #fff;
+        background-color: #1e4b60;
+        border: 1px solid #3b6274 ;
+        text-align: center !important;
+        margin: 15px 0;
+    }
+
+    .no-bg{
+        background-color: transparent !important;
+        margin: 0px !important;
+
+        .label-ios{
+            background-color: transparent !important;
+        }
+    }
+
+    .no-bg .item-inner{
+        padding-right: 0px !important;
+    }
+
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h6{
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+        }
+    }
+
+    .list-ios .item-block .item-inner {
+        border-bottom: 1px solid #3b6274;
+        padding-right: 0px;
+    }
+
+    .item-label-stacked .text-input-ios, .item-label-floating .text-input-ios {
+        margin-left: 0;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        width: calc(100% - 8px);
+        text-align: center;
+    }
+    // .text-input-ios{
+    //     margin: 0 0 0 10px !important;
+    // }
+    .list-ios .item-input:last-child {
+        border-bottom: 1px solid #3b6274;
+    }
+
+    .item-ios .radio-ios {
+        margin: 0px !important;
+    }
+
+    .login-button{
+        text-align: center;
+    }
+    .login-button button{
+        background: linear-gradient(to right, #377379 0%, #478075 102%);
+        color: #ffffff;
+        font-weight: 700;
+        width: 200px;
+        margin: 20px 0px;
+        letter-spacing: 1px;
+    }
+
+    .nav{
+        text-align: center;
+        letter-spacing: 1px;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .select-ios {
+        padding: 13px 8px 13px 18px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .select-searchable-value {
+        text-align: left !important;
+        padding-left: 7px !important;
+        margin: 0 0 0 10px !important;
+    }
+    
+
+
+    .rows{
+        display: flex;
+        width: 100%;
+        margin: 0px auto;
+        text-align: center;
+        margin-top: 10px;
+        // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .lab{
+        width: 42px;
+        text-align: center;
+        background-color: #3b6274;
+    }
+    .lab ion-icon{
+        font-size: 2rem;
+        padding: 14px 0;
+    }
+    .inp{
+        width: 88%;
+        text-align: center;
+        border: 2px solid #3b6274;
+    }
+
+    .inp2{
+        width: 88%;
+        text-align: left;
+        border: 2px solid #3b6274;
+    }
+
+    .uplo {
+        text-align: left !important;
+        padding-left: 8px !important;
+    }
+
+    @media screen and (max-width:350px) {
+        .center-list{
+            .center{
+                h6{
+                    font-size: 12px;
+                }
+            }
+
+            .label-ios{
+                font-size: 12px;
+            }
+        }
+    }
+
+    .newDiv{
+        width: 90px;
+        flex: 0 0 50px;
+        margin: 5px;
+        background-color: green;
+    }
+
+    .checkBox{
+        width: 22%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .termsDiv{
+        display: flex;
+            flex-direction: row;
+            // flex-wrap: wrap;
+    }
+
+    .dummy{
+        position: relative;
+    }
+
+}

@@ -1,0 +1,140 @@
+page-login {
+
+    .content-ios {
+        color: #fff;
+        background-color: #1e4b60;
+    }
+    .main-logo{
+        text-align: center;
+    }
+    .main-logo img{
+        width: 100%;
+    }
+    //////////////////// Content center align
+
+
+    .item-ios ion-icon[item-end] {
+        margin-left: 0;
+        margin-top: 8px !important;
+        margin-bottom: 0 !important;
+        font-size: 20px;
+        color: #999999;
+    }
+
+    .input-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 85% !important;
+        height: 100%;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    }
+
+    .item-ios [item-end] {
+        margin: 8px 8px 9px 0;
+    }
+
+    .select-ios {
+        padding: 13px 7px;
+        width: 83%;
+        max-width: 87%;
+        text-align: left;
+    }
+    
+    .outer {
+        display: table;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+       
+      }
+      
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      
+      .inner {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+
+      //////////////////// input
+
+      .list-ios {
+        margin: 5px 0px;
+    }
+    .center-div{
+        padding: 20px 45px 0px;
+
+        ::placeholder{
+            color: #999;
+        }
+
+        ion-input{
+            text-align: center !important;
+        }
+
+        .label-ios{
+            background-color: #3b6274 ;
+            width: 35px !important;
+            height: 45px;
+            margin: 0px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ion-icon{
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+    .item-ios {
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 1.5rem;
+        color: #fff;
+        background-color: #1e4b60;
+        border: 1px solid #3b6274 ;
+        text-align: center !important;
+        margin: 15px 0;
+    }
+    .list-ios .item-block .item-inner {
+        border-bottom: 1px solid #3b6274;
+        padding-right: 0px;
+    }
+    .item-label-stacked .text-input-ios, .item-label-floating .text-input-ios {
+        margin-left: 0;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        width: calc(100% - 8px);
+        text-align: center;
+    }
+    .list-ios .item-input:last-child {
+        border-bottom: 1px solid #3b6274;
+    }
+    /////////////////////////////// button
+    .login-button{
+        text-align: center;
+    }
+    .login-button button{
+        background: linear-gradient(to right, #377379 0%, #478075 102%);
+        color: #ffffff;
+        font-weight: 700;
+        width: 200px;
+        margin: 20px 0px;
+        letter-spacing: 1px;
+    }
+
+    .nav{
+        margin-top: 8rem;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,77 @@
+<ion-content>
+  <div class="connect">
+    <!-- <div class="row">
+      <p class="left">connect : </p>
+      <p class="right">Elangathir</p>
+    </div> -->
+    <hr>
+    <div class="row">
+      <p class="left">Connect Type  </p>
+      <p class="right">{{ct}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left">Connect Status  </p>
+      <p class="right">{{cs}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left">Business Category  </p>
+      <p class="right">{{bc}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Connect Name  </p>
+      <p class="right">{{cn}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Mobile  </p>
+      <p class="right">{{mn}} <span> <ion-icon name="ios-call" (click)="call(mn)"></ion-icon> </span> </p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Email  </p>
+      <p class="right">{{em}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Address  </p>
+      <p class="right">{{ad}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Comment  </p>
+      <p class="right">{{com}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Table Name  </p>
+      <p class="right">{{table_name}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> Meeting Type  </p>
+      <p class="right">{{meeting_type}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="left"> How About  Connect  </p>
+      <p class="right">{{ab}}</p>
+    </div>
+    <hr>
+
+    <div style="text-align: center;">
+      <button *ngIf="t == 1"  ion-button round color="danger" (click)="mark()">Mark As Unsuccessful 
+      </button>
+    </div>
+  
+
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <button ion-button full (click)="dismiss()">Close
+  </button>
+</ion-footer>

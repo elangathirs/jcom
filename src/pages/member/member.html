@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Table</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <div class="rows" >
+    <!-- <div class="lab">
+      <ion-icon name="ios-briefcase"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder=" Choose Business Category"
+        [items]="dislist" itemValueField="table_id" itemTextField="table_name" [canSearch]="true"
+        (onChange)="view($event)"
+        >
+      </select-searchable>
+    </div> -->
+    <ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]=true
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+
+  </div>
+
+  <div class="empty" *ngFor="let item of dislist">
+    <ion-card class="grid" (click)="view(tid?.value)">
+        <div class="row">
+            <div class="title">
+              <p>{{item.table_name}}</p>
+            </div>
+            <div class="ey-ic">
+              <img src="assets/imgs/ey-ic.png" alt="">
+            </div>
+          </div>
+    </ion-card>
+    <ion-textarea style="display: none;" value="{{item.table_id}}" #tid></ion-textarea>
+  </div>
+
+</ion-content>

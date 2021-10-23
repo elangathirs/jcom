@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>You & Me Slip</ion-title>
+    <div class="ic" (click)="hconnect()">
+        <ion-icon name="list-box"></ion-icon>
+      </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!-- <div class="row">
+    <div class="lab">
+      <ion-icon name="ios-hand"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-select placeholder="You" [(ngModel)]="you">
+          <ion-option value="1">Elangathir</ion-option>
+          <ion-option value="2">Hari Sakthi</ion-option>
+          <ion-option value="3">Sudharsanam</ion-option>
+          <ion-option value="4">Govindaraj</ion-option>
+          <ion-option value="5">Chandru</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="lab">
+      <ion-icon name="person-add"></ion-icon>
+    </div>
+    <div class="inp">
+      <!-- <ion-item>
+        <ion-select placeholder="Choose" [(ngModel)]="member">
+            <ion-option *ngFor="let item of memberslist" value="{{item.id}}">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item> -->
+
+      <!-- <ion-item> -->
+        <select-searchable
+        class="uplo"
+            item-content
+            placeholder = "Choose"
+            [(ngModel)]="member"
+            [items]="memberslist"
+            itemValueField="id"
+            itemTextField="name"
+            [canSearch]="true">
+        </select-searchable>
+        <!-- (onChange)="portChange($event)" -->
+    <!-- </ion-item> -->
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">
+      <ion-icon name="ios-pin"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="text" placeholder="Place" [(ngModel)]="place"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">
+      <ion-icon name="ios-calendar"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="D - MMM - YYYY" [(ngModel)]="mydate" min={{minDate}}
+        max={{maxDate}} min = 2019></ion-datetime>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="comment">
+    <ion-item>
+      <ion-textarea placeholder="comments" [(ngModel)]="comment">
+      </ion-textarea>
+    </ion-item>
+  </div>
+
+  <!-- <div class="comments">
+    <ion-textarea placeholder="Topics of Conversation">
+    </ion-textarea>
+  </div> -->
+
+  <div class="conf-btn">
+    <button ion-button (click)="confirm()">
+      Confirm
+    </button>
+  </div>
+
+
+</ion-content>

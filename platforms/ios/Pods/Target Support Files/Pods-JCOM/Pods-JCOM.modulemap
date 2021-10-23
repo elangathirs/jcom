@@ -1,0 +1,6 @@
+framework module Pods_JCOM {
+  umbrella header "Pods-JCOM-umbrella.h"
+
+  export *
+  module * { export * }
+}

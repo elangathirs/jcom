@@ -1,0 +1,35 @@
+page-modelgnote {
+    ion-footer button {
+        margin: 0 !important;
+      }
+
+      .connect{
+        background: #fff;
+    }
+    .row{
+        display: flex;
+        color: black;
+    }
+    .left{
+      width: 30%;
+      text-align: left;
+      font-size: 1.6rem;
+      font-weight: 500;
+      padding: 8px 0;
+      margin: 0;
+      position: relative;
+      left: 10px;
+
+    }
+    .right{
+        width: 70%;
+        text-align: left;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #1e4b60;
+        padding: 8px 0;
+        margin: 0;
+        position: relative;
+        left: 15px;
+    }
+}

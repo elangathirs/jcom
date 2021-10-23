@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>GNote Entry</ion-title>
+    <div class="ic" (click)="hconnect()">
+      <ion-icon name="list-box"></ion-icon>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="albums"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder="Select Table " [(ngModel)]="table" [items]="tables"
+        itemValueField="table" itemTextField="table_name"  (onChange)="loadTable($event)" [canSearch]="true">
+      </select-searchable>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="person-add"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder="GNote To " [(ngModel)]="member" [items]="memberslist"
+        itemValueField="id" itemTextField="name" [canSearch]="true">
+      </select-searchable>
+    </div>
+  </div>
+
+  <div class="rows" (click)="connect_member_page()">
+    <div class="lab">
+      <ion-icon name="contact"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <!-- <ion-input type="text" placeholder="Connect Member" [(ngModel)]="connectmember"></ion-input> -->
+        <p style="color: white">{{connectmember}}</p>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-cash"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="number" placeholder="Amount" [(ngModel)]="amount"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <p class="label">Business Type</p>
+  <div class="flex">
+    <ion-row class="radio-btn" radio-group [(ngModel)]="btype">
+      <ion-col>
+        <ion-item>
+          <ion-label>First Business</ion-label>
+          <ion-radio value="1"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+      <ion-col>
+        <ion-item>
+          <ion-label leb>Regular Business</ion-label>
+          <ion-radio value="2"></ion-radio>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <p class="label">Connect Type</p>
+  <!-- <div class="flex"> -->
+    <ion-row class="radio-btn" radio-group [(ngModel)]="ctype">
+  <div class="flex">
+
+      <ion-col>
+        <ion-item>
+          <ion-label>JCOM</ion-label>
+          <ion-radio value="1"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>JCI</ion-label>
+          <ion-radio value="2"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Non-JCI</ion-label>
+          <ion-radio value="3"></ion-radio>
+        </ion-item>
+      </ion-col>
+      </div>
+    </ion-row>
+  <!-- </div> -->
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-briefcase"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder="Business Category" [(ngModel)]="buisness"
+        [items]="buisnessdata" itemValueField="id" (onChange)="business_change($event)"  itemTextField="category" [canSearch]="true">
+      </select-searchable>
+    </div>
+  </div>
+
+  <div class="comment">
+    <ion-item>
+      <ion-textarea placeholder="comments" [(ngModel)]="comment">
+      </ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="conf-btn">
+    <button ion-button (click)="confirm()">
+      Confirm
+    </button>
+  </div>
+
+</ion-content>

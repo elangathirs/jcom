@@ -1,0 +1,147 @@
+<ion-menu [content]="content">
+
+  <ion-content >
+      <!-- style="padding-top:115px; background: linear-gradient(to bottom, #000099 0%, #660033 100%);;" -->
+    <div class="striff">
+      <img src="assets/imgs/jcom_logo.png" alt="">
+    </div>
+
+    <div class="side-row" (click)="dashpage()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-home-outline"></ion-icon>
+      </div>
+      <div class="side-option">
+        DashBoard
+      </div>
+    </div>
+
+    <div class="side-row" (click)="abour_jcom()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-information-circle-outline"></ion-icon>
+      </div>
+      <div class="side-option">
+        About JCOM
+      </div>
+    </div>
+    <div class="side-row" (click)="profilepage()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-contacts-outline"></ion-icon>
+      </div>
+      <div class="side-option">
+        Profile
+      </div>
+    </div>
+    <div class="side-row" (click)="connectpage()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-person-add"></ion-icon>
+      </div>
+      <div class="side-option">
+        Connect Entry
+      </div>
+    </div>
+    <div class="side-row" (click)="gnotepage()" menuClose>
+      <div class="ic">
+        <p class="side-rs">&#8377;</p>
+      </div>
+      <div class="side-option">
+        GNote Entry
+      </div>
+    </div>
+
+    <!-- <div class="side-row" (click)="youpage()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-people-outline"></ion-icon>
+      </div>
+      <div class="side-option">
+        You & Me Entry
+      </div>
+    </div> -->
+
+    <div class="side-row" (click)="Showcase()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-images"></ion-icon>
+      </div>
+      <div class="side-option">
+        Showcase
+      </div>
+    </div>
+
+    <div class="side-row" (click)="guestpage()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-man-outline"></ion-icon>
+      </div>
+      <div class="side-option">
+        Guest Registration
+      </div>
+    </div>
+    <div class="side-row" (click)="memberpage()" menuClose>
+      <div class="ic">
+        <ion-icon name="people"></ion-icon>
+      </div>
+      <div class="side-option">
+        JCOM Tables
+      </div>
+    </div>
+    <div class="side-row" (click)="searchpage()" menuClose>
+      <div class="ic">
+        <ion-icon name="search"></ion-icon>
+      </div>
+      <div class="side-option">
+        Search Members
+      </div>
+    </div>
+
+    <!-- <div class="side-row" (click)="attendance()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-barcode"></ion-icon>
+      </div>
+      <div class="side-option">
+        Attendance
+      </div>
+    </div>
+    <div class="side-row" (click)="attendanceHistory()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-calendar"></ion-icon>
+      </div>
+      <div class="side-option">
+        Attendance History
+      </div>
+    </div> -->
+
+    <div class="side-row" (click)="app_share()" menuClose>
+      <div class="ic">
+        <ion-icon name="ios-share"></ion-icon>
+      </div>
+      <div class="side-option">
+        Share
+      </div>
+    </div>
+
+
+    <div class="side-fot">
+      <p class="account">{{member_name}}</p>
+      <button ion-button (click)="logout()" menuClose >Log Out</button>
+      <p (click)="changepsw()" menuClose >Change Password</p>
+    </div>
+
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<!-- <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list> -->
+
+<!-- <ion-item>
+      <button menuClose ion-item (click)="openPage(p)">
+        <ion-icon name="add-circle"></ion-icon>Dashboard
+      </button>
+    </ion-item> -->
+
+<!-- <ion-toolbar>
+      <ion-title>JC IN BUSINESS</ion-title>
+    </ion-toolbar> -->

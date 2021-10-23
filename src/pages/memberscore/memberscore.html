@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Member Score</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <div *ngFor="let item of scoredata" (click)="openModel(item)">
+    <div class="flex">
+      <div class="left">
+        <img src={{item.batch_pic}} alt="">
+      </div>
+      <ion-card>
+        <p>
+            {{item.month}} MONTH
+        </p>
+      </ion-card>
+    </div>
+  </div> -->
+
+  <ion-card *ngFor="let item of scoredata" (click)="openModel(item)">
+     <p>{{item.month}}</p>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Showcase History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div *ngFor="let item of show_history">
+
+    <ion-card>
+
+      <div class="flex">
+
+        <div class="left">
+          <p>{{item.date}}</p>
+        </div>
+
+        <div class="center">
+          <P class="name">{{item.mode}}</P>
+        </div>
+
+        <div class="right">
+          <P class="name">{{item.title}}</P>
+        </div>
+
+      </div>
+    </ion-card>
+
+  </div>
+
+</ion-content>+-+

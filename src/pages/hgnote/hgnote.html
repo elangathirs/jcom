@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> GNote History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let item of hgnotelist">
+
+    <ion-card (click)="modal(am?.value,bc?.value,com?.value,ct?.value)">
+      <div class="flex">
+        <div class="left">
+          <p>{{item.created_on}}</p>
+        </div>
+        <div class="center">
+          <P class="name">{{item.name}}</P>
+        </div>
+        <div class="right" *ngIf="item.type == 1">
+          <ion-icon class="rotate1" name="arrow-up"></ion-icon>
+        </div>
+        <div class="right" *ngIf="item.type == 2">
+          <ion-icon class="rotate2" name="arrow-up"></ion-icon>
+        </div>
+      </div>
+
+      <ion-textarea style="display: none;" value="{{item.amount}}" #am></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.business_category}}" #bc></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.comments}}" #com></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.connect_type}}" #ct></ion-textarea>
+
+    </ion-card>
+
+  </div>
+
+
+</ion-content>

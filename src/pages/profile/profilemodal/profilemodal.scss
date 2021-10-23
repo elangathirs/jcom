@@ -1,0 +1,103 @@
+page-profilemodal {
+    .tint{
+        // background: #ffffff91;
+        background: #ffffffeb;
+        position: relative;
+        bottom: 46px;
+        text-align: center;
+    }
+    .tint p{
+        margin: 0;
+    }
+    .t-name{
+        text-align: center;
+        color: #143342;
+        font-weight: 700;
+        padding: 3px 0;
+    }
+    .t-company{
+        text-transform: uppercase;
+        color: #143342;
+    }
+    .t-work{
+        padding: 5px 0;
+        background: #3b6274;
+    }
+    .t-work span{
+        color: aquamarine;
+    }
+    
+    //////////////////////////////////////
+    ion-card-header{
+        text-align: left;
+        padding: 10px 15px;
+        background-color: #3b6274;
+        color: #fff !important;
+    }
+    ion-card-header ion-icon{
+        float: right;
+    }
+    .card-ios{
+        background: transparent;
+    }
+    
+    
+    
+    
+    
+    
+    ////////////////////////////default custom
+    
+    .item-ios {
+        padding-left: 10px;
+        margin: 10px 0;
+        padding-right: 10px;
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: none;
+        color: black;
+        background-color: #fff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .item-input .label-ios, .item-select .label-ios, .item-datetime .label-ios {
+        color: #1e4b60;
+    }
+    .labl{
+        padding: 0px 12px;
+        margin: 1px 4px;
+        color: #e0dfdf;
+    }
+    .txt-ar .text-input-ios {
+        margin: 2px 5px;
+        padding: 8px 10px;
+        // border: 1px solid #3b6274;
+        width: calc(100% - 8px - 8px);
+        height: 100px;
+    }
+    .txt-ar textarea{
+        border: 1px solid #3b6274;
+        background-color: #fff;
+        color: black;
+    }
+    .overlap{
+        position: relative;
+        bottom: 0px;
+        margin-top: 15px;
+    }
+
+    .conf-btn{
+        width: 95%;
+        margin: 0px auto;
+        margin-bottom: 10px;
+        
+    }
+    .conf-btn button{
+        width: 100%;
+        background-color: #3b6274;
+    }
+
+}

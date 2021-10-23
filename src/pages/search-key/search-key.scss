@@ -1,0 +1,315 @@
+page-search-key {
+    .toolbar-title-ios {
+        padding: 0 15px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: left;
+        // position: relative;
+        // right: 25px;
+        // top: 11px;
+    }
+    .content-ios{
+        background-color: #1e4b60;
+        color: #fff;
+    }
+////////////////////////////////////////
+
+.rows{
+    display: flex;
+    width: 99%;
+    margin: 0px auto;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    position: sticky;
+    top: 0px !important;
+    z-index: 99;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.lab{
+    width: 15%;
+    text-align: center;
+    color: #3b6274;
+    background-color: #fff;
+}
+.lab ion-icon{
+    font-size: 2rem;
+    padding: 14px 0;
+}
+.inp{
+    width: 85%;
+    text-align: center;
+    // border: 2px solid #3b6274;
+    background-color: #fff;
+    color: #3b6274;
+}
+.flex{
+    display: flex;
+    width: 90%;
+    margin: 0px auto;
+}
+.flex button{
+    width: 100%;
+}
+.label{
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #bababb;
+    padding-left: 2px;
+}
+
+.new-btn{
+    background-color: transparent;
+    border: 1px solid #3b6274;
+}
+.new-btn:focus{
+    background-color: #105c80;
+    border: 2px solid #3b6274;
+    font-weight: bold;
+}
+.new-btn:active{
+    background-color: #105c80;
+    border: 2px solid #3b6274;
+    font-weight: bold;
+}
+
+.comment{
+    width: 90%;
+    margin: 0px auto;
+    border: 1px solid #3b6274;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 120px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.comment .text-input-ios {
+    margin: 13px 8px;
+    padding: 0;
+    width: calc(100% - 8px - 8px);
+    height: 100px;
+
+}
+.conf-btn{
+    width: 95%;
+    margin: 0px auto;
+}
+.conf-btn button{
+    width: 100%;
+    background-color: #3b6274;
+}
+
+/////////////////////////////range
+
+.range{
+    width: 90%;
+    display: flex;
+    margin: 0px auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.btns button{
+    width: 92px;
+}
+.btns .button-ios {
+    border-radius: 2px;
+    height: 3.6rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    border: 1.5px solid #3b6274;
+    margin: 5px 5px;
+}
+// .btns .button-ios:focus{
+//     background-color: #105c80;
+//     border: 2px solid #3b6274;
+//     font-weight: bold;
+// }
+.color{
+    height: 25px;
+    padding: 0 1.1em;
+    background-color: #f98904;
+    margin: 0rem 0.2rem;
+}
+.empty{
+    height: 25px;
+    padding: 0 1.1em;
+}
+
+/////////////////////////////// default custom
+
+.item-ios.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0;
+}
+.select-text {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 170px;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.select-ios .select-placeholder {
+    color: #999;
+}
+
+.select-ios {
+    padding: 10px 0px 10px 0px;
+}
+.item-ios.item-input.item-input-has-focus .item-inner, .item-ios.item-input.input-has-focus.item-inner{
+    border-bottom-color: black !important;
+}
+.item.item-ios .checkbox-ios {
+    position: static;
+    display: block;
+    margin: 16px 11px 9px 4px;
+}
+.checkbox-ios .checkbox-checked {
+    border-color: green;
+    background-color: #3b6274;
+}
+
+.hot{
+    background-color: #e13838;
+}
+.hot:active{
+    background-color: #e13838;
+    font-weight: 600;
+}
+.hot:focus{
+    background-color: #e13838;
+    font-weight: 600;
+}
+
+.med{
+    background-color: #17b7bc;
+}
+.med:active{
+    background-color: #17b7bc;
+    font-weight: 600;
+}
+.med:focus{
+    background-color: #17b7bc;
+    font-weight: 600;
+}
+
+.cold{
+    background-color: #869797;
+}
+.col:active{
+    background-color: #869797;
+    font-weight: 600;
+
+}
+.col:focus{
+    background-color: #869797;
+    font-weight: 600;
+}
+
+
+// dummy
+
+///////////////////////////rough
+
+.radio-ios .radio-icon {
+    left: 0;
+    top: 0;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+}
+
+.radio-ios .radio-inner {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    -webkit-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.radio-btn ion-col{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border: 1px solid #3f6577;
+    margin: 2px 5px;
+    height: 4rem;
+    border-radius: 2px;
+}
+.radio-btn ion-col .item-ios{
+    color: #ffffff;
+    text-align: center;
+    bottom: 12px;
+    font-size: 1.6rem;
+    padding-right: 0px !important;
+}
+.item-radio-checked.item-ios ion-label {
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.7rem;
+}
+.ic{
+    float: right;
+    position: relative;
+    right: 8px;
+    bottom: 7px;
+    color: #fff;
+}
+
+
+  .error {
+    color: rgb(223, 62, 62);
+    font-size: 12px;
+  }
+
+  .error1 {
+    color:  #ffffff;
+    // border-bottom: 1px solid #ff0000;
+  }
+
+  .select-icon {
+    visibility: hidden;
+    }
+
+ion-select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    // width: 100% !important;
+}
+
+
+///////////////////////////// late Edit
+
+.select-searchable-ios .select-searchable-icon-inner {
+    color: transparent;
+}
+.item:not(.item-label-stacked):not(.item-label-floating) .select-searchable-ios .select-searchable-value {
+    padding-left: 6px;
+}
+
+//////////////////////////28.2.2019
+
+}

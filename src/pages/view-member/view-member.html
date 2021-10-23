@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Members</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let item of memberlist">
+    <ion-card class="list" (click)="modal(
+          bc?.value,mn?.value,email?.value,web?.value,con?.value,state?.value,zone?.value,city?.value,lom?.value,jt?.value,
+          add?.value,dis?.value,pin?.value,dp?.value,bi?.value,bk?.value,pro?.value,nc?.value,name?.value,bn?.value
+        )">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://admin.jcombiz.com/{{item.profile_photo}}">
+        </ion-avatar>
+
+        <div class="row">
+          <div class="title">
+            <h2>{{item.name}}</h2>
+            <p>{{item.business_name}}</p>
+          </div>
+          <div class="ey-ic">
+            <img src="assets/imgs/ey-ic.png" alt="">
+          </div>
+        </div>
+        
+      </ion-item>
+
+      <ion-textarea value="{{item.business_category}}" #bc></ion-textarea>
+      <ion-textarea value="{{item.p_mobile_no}}" #mn></ion-textarea>
+      <ion-textarea value="{{item.p_email_id}}" #email></ion-textarea>
+      <ion-textarea value="{{item.website}}" #web></ion-textarea>
+      <ion-textarea value="{{item.country}}" #con></ion-textarea>
+      <ion-textarea value="{{item.state}}" #state></ion-textarea>
+      <ion-textarea value="{{item.zone}}" #zone></ion-textarea>
+      <ion-textarea value="{{item.city}}" #city></ion-textarea>
+      <ion-textarea value="{{item.lom}}" #lom></ion-textarea>
+      <ion-textarea value="{{item.jib_table}}" #jt></ion-textarea>
+      <ion-textarea value="{{item.address}}" #add></ion-textarea>
+      <ion-textarea value="{{item.district}}" #dis></ion-textarea>
+      <ion-textarea value="{{item.pincode}}" #pin></ion-textarea>
+      <ion-textarea value="{{item.profile_photo}}" #dp></ion-textarea>
+      <ion-textarea value="{{item.business_info}}" #bi></ion-textarea>
+      <ion-textarea value="{{item.business_keywords}}" #bk></ion-textarea>
+      <ion-textarea value="{{item.products}}" #pro></ion-textarea>
+      <ion-textarea value="{{item.needed_contacts}}" #nc></ion-textarea>
+      <ion-textarea value="{{item.name}}" #name></ion-textarea>
+      <ion-textarea value="{{item.business_name}}" #bn></ion-textarea>
+
+    </ion-card>
+
+    <!-- <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="{{item.profile_photo}}">
+              </ion-avatar>
+              <h2>{{item.name}}</h2>
+              <p>{{item.business_name}}</p>
+            </ion-item>          
+        </ion-card> -->
+  </div>
+
+</ion-content>

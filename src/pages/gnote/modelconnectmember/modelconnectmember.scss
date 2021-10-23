@@ -1,0 +1,70 @@
+page-modelconnectmember {
+    .alg{
+        display: flex;
+        margin: 0px auto;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        bottom: 3px;
+
+        .btn-left{
+            width: 50%;
+            text-align: center;
+
+            button{
+                width: 97%;
+            }
+        }
+        .btn-right{
+            width: 50%;
+            text-align: center;
+
+            button{
+                width: 97%;
+            }
+        }
+    }
+    ion-footer button {
+        margin: 0 !important;
+      }
+      .flex{
+        display: flex;
+        margin: 3px 0;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        background-color: #ffffff;
+        color: black;
+        ion-label{
+            padding: 2px 0;
+            margin: 0;
+        }
+    }
+    .left{
+        width: 90%;
+        // text-align: center;
+        margin: 5px 0;
+        padding: 5px 5px;
+    }
+    
+    .right{
+        width: 10%;
+        text-align: center;
+        padding: 13px 0;
+        position: relative;
+        left: 3px;
+    }
+    .third{
+        display: flex;
+        font-weight: bold;
+    
+        span{
+            padding-right: 10px;
+            color: rgb(136, 122, 122);
+        }
+    }
+    .item-ios .radio-ios[item-start]{
+        margin: 11px 10px 10px 4px;
+    }
+    .item-ios [item-end]{
+        color: red;
+    }
+}

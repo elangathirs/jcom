@@ -1,0 +1,42 @@
+page-statsmodal {
+
+    .toolbar-title-ios {
+        padding: 0 12px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        left: 50px;
+    }
+    
+    .row{
+        width: 90%;
+        margin: 0px auto;
+        background-color: #fff;
+        color: black;
+        border-radius: 2px;
+    }
+    .row p{
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        border-bottom: 2px solid #3b6274;
+        color: black;
+        font-weight: 500;
+        
+    }
+    .row .left{
+        width: 40%;
+        text-align: left
+    }
+    .row .right{
+        width: 60%; 
+        text-align: right
+    }
+
+    .green{
+        color: #035a03 !important;
+        font-weight: 600 !important;
+    }
+}

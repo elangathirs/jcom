@@ -1,0 +1,83 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "call-number": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "com-badrit-base64": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "com.razorpay.cordova": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-market": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.jcom"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-cocoapod-support": {
+      "PACKAGE_NAME": "com.jcom"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.jcom"
+    }
+  }
+}

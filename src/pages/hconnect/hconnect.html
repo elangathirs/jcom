@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Connect History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let item of hconnectlist">
+
+    <ion-card (click)="modal(ab?.value,ad?.value,bc?.value,com?.value,cn?.value,cs?.value,ct?.value,em?.value,mn?.value,mt?.value,tn?.value)">
+
+      <div class="flex">
+
+        <div class="left">
+          <p>{{item.created_on}}</p>
+        </div>
+
+        <div class="center">
+          <P class="name">{{item.name}}</P>
+        </div>
+
+        <div class="right" *ngIf="item.type == 1">
+          <ion-icon class="rotate1" name="arrow-up"></ion-icon>
+        </div>
+        <div class="right" *ngIf="item.type == 2">
+            <ion-icon class="rotate2" name="arrow-up"></ion-icon>
+          </div>
+
+      </div>
+
+      <ion-textarea style="display: none;" value="{{item.about_connect}}" #ab></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.address}}" #ad></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.business_category}}" #bc></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.comments}}" #com></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.connect_name}}" #cn></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.connect_status}}" #cs></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.connect_type}}" #ct></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.email_id}}" #em></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.mobile_no}}" #mn></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.meeting_type}}" #mt></ion-textarea>
+      <ion-textarea style="display: none;" value="{{item.table_name}}" #tn></ion-textarea>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

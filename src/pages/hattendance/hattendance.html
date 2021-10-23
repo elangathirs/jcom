@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Attendance History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let item of attendance_history">
+
+    <ion-card>
+
+      <div class="flex">
+<!-- 
+        <div class="left">
+          <p>{{item.date}}</p>
+        </div> -->
+
+
+        <div class="center">
+          <P class="name">{{item.date}}</P>
+
+        </div>
+
+        <!-- <div class="center">
+          <P class="name">{{item.mobile_no}}</P>
+        </div> -->
+
+
+        <div class="right" style="color: green !important;" *ngIf="item.attendance == 'P'">
+          <!-- <ion-icon class="rotate1" name="arrow-up"></ion-icon> -->
+          <div class="rotate1" >P</div>
+        </div>
+        <div class="right" style="color: red !important;" *ngIf="item.attendance != 'P'">
+            <!-- <ion-icon class="rotate2" name="arrow-up"></ion-icon> -->
+          <div class="rotate2" >A</div>
+          </div>
+      </div>
+    </ion-card>
+
+  </div>
+
+</ion-content>

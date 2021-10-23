@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Guest Registration</ion-title>
+    <div class="ic" (click)="hguest()">
+      <ion-icon name="list-box"></ion-icon>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="row">
+    <div class="lab" (click)="getContacts()">
+      <ion-icon name="ios-person"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="text" placeholder="From Phone Book"  [(ngModel)]="name"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="lab">
+      <ion-icon name="ios-phone-portrait"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="tel" placeholder="Mobile Number" pattern="[0-9]*"  [(ngModel)]="mobilenumber"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <form novalidate (ngSubmit)="signup()" [formGroup]="signupform">
+  <div class="row">
+    <div class="lab">
+      <ion-icon name="ios-mail"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="email" placeholder="E-Mail"  [(ngModel)]="mail" formControlName="mail" [class.error1]="!signupform.controls.mail.valid && signupform.controls.mail.dirty"></ion-input>
+      </ion-item>
+      <!-- <ion-item no-lines *ngIf="( signupform.get('mail').hasError('minlength') || signupform.get('mail').hasError('pattern') ||signupform.get('mail').hasError('required') ) && signupform.get('mail').touched">
+        <div class="error" *ngIf="signupform.get('mail').hasError('required') && signupform.get('mail').touched" >
+            Fill the Email
+        </div>
+        <div class="error" *ngIf="signupform.get('mail').hasError('pattern') && signupform.get('mail').touched">
+            Email address invalid
+        </div>
+      </ion-item> -->
+    </div>
+  </div>
+  </form>
+
+  <div class="row">
+    <div class="lab">
+      <ion-icon name="ios-pin"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item>
+        <ion-input type="text" placeholder="City" [(ngModel)]="city"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="lab">
+        <ion-icon name="ios-briefcase"></ion-icon>
+      </div>
+      <div class="inp">
+          <select-searchable
+          class="uplo"
+              item-content
+              placeholder = "Business Category"
+              [(ngModel)]="buisness"
+              [items]="buisnessdata"
+              itemValueField="id"
+              itemTextField="category"
+              [canSearch]="true">
+          </select-searchable>
+      </div>
+    </div>
+
+  <p class="label"> Type</p>
+  <div class="flex">
+    <ion-row class="radio-btn" radio-group [(ngModel)]="ctype">
+      <ion-col>
+        <ion-item>
+          <ion-label>JCI</ion-label>
+          <ion-radio value="1"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>Non-JCI</ion-label>
+          <ion-radio value="2"></ion-radio>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="comment">
+    <ion-item>
+      <ion-textarea placeholder="comments" [(ngModel)]="comment">
+      </ion-textarea>
+    </ion-item>
+  </div>
+
+
+  <div class="conf-btn">
+    <button ion-button (click)="confirm()">
+      Confirm
+    </button>
+  </div>
+
+</ion-content>

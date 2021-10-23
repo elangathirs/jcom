@@ -1,0 +1,230 @@
+<ion-content padding>
+
+  <div class="center-div" text-center>
+    <img src="assets/imgs/jcom_logo.png" class="logo_img">
+
+    <ion-list margin-bottom>
+
+      <!-- // Name // -->
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-person"></ion-icon>
+        </ion-label>
+        <ion-input type="text" placeholder="Name" [(ngModel)]="userName">
+        </ion-input>
+      </ion-item>
+
+      <!-- // Mobile Number // -->
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-call"></ion-icon>
+        </ion-label>
+        <ion-input type="tel" placeholder="Mobile Number" [(ngModel)]="mobile" pattern="[0-9]*" maxlength="10">
+        </ion-input>
+      </ion-item>
+
+
+      <!-- // Email // -->
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-mail"></ion-icon>
+        </ion-label>
+        <ion-input type="email" placeholder="Email Id" [(ngModel)]="eMail"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></ion-input>
+      </ion-item>
+
+
+      <!-- // Password // -->
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-lock"></ion-icon>
+        </ion-label>
+        <ion-input [type]="passwordType" placeholder="Password" [(ngModel)]="password"></ion-input>
+        <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+      </ion-item>
+
+      <!-- // Country // -->
+      <ion-list class="dummy">
+        <div class="rows">
+          <div class="lab">
+            <ion-icon name="ios-globe"></ion-icon>
+          </div>
+          <div class="inp">
+            <ion-select placeholder="Select Country" [(ngModel)]="countryName" (ionChange)="getZone(countryName)">
+              <div *ngFor="let data of country">
+                <ion-option value="{{data.country}}">{{data.country_name}}</ion-option>
+              </div>
+            </ion-select>
+          </div>
+        </div>
+      </ion-list>
+
+      <!-- // Zone // -->
+      <ion-list *ngIf="show_zone" class="dummy">
+        <div class="rows">
+          <div class="lab">
+            <ion-icon name="ios-locate"></ion-icon>
+          </div>
+          <div class="inp">
+            <ion-select placeholder="Select Zone" [(ngModel)]="zoneName" (ionChange)="getLOM(zoneName)">
+              <div *ngFor="let data of zone;let i = index">
+                <ion-option value="{{data.zone}}">{{data.zone_name}}</ion-option>
+              </div>
+            </ion-select>
+          </div>
+        </div>
+      </ion-list>
+
+      <!-- LOM -->
+      <ion-list *ngIf="show_LOM" class="dummy">
+        <div class="rows">
+          <div class="lab">
+            <ion-icon name="ios-people"></ion-icon>
+          </div>
+          <div class="inp">
+            <select-searchable item-content placeholder="Select LOM " [(ngModel)]="lomName" [items]="lom"
+              itemValueField="lom" itemTextField="lom_name" (onChange)="loadlom($event)" [canSearch]="true">
+            </select-searchable>
+          </div>
+        </div>
+      </ion-list>
+
+
+    </ion-list>
+
+    <!-- // Member ID // -->
+    <ion-list margin-bottom radio-group class="center-list">
+
+      <ion-row style="position: relative;">
+        <ion-col col-6 class="center">
+          <h6 class="no-bg">JCI Membership ID</h6>
+        </ion-col>
+        <ion-col col-3>
+          <ion-item class="no-bg" no-lines>
+            <ion-radio (click)="show_member_id(1)" style="radio-ios-icon-border-style: 3px solid #fff;"></ion-radio>
+            <ion-label>Yes</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3>
+          <ion-item class="no-bg" no-lines>
+            <ion-radio (click)="show_member_id(0)"></ion-radio>
+            <ion-label>No</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-list *ngIf="member">
+        <div class="rows">
+          <div class="lab">
+            <ion-icon name="ios-contact"></ion-icon>
+          </div>
+          <div class="inp">
+            <ion-input type="number" style="margin: 0 0 0 17px;" placeholder="Membership ID" [(ngModel)]="memberId"></ion-input>
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-list *ngIf="show_meeting_table" margin-bottom class="dummy">
+        <div class="rows">
+          <div class="lab">
+            <ion-icon name="ios-contacts"></ion-icon>
+          </div>
+          <div class="inp">
+            <ion-select placeholder="Meeting Type" [(ngModel)]="meetingType" (ionChange)="getTable(meetingType)">
+              <div *ngFor="let data of meeting_type">
+                <ion-option value="{{data.meeting_type}}">{{data.meeting_type_name}}</ion-option>
+              </div>
+            </ion-select>
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-list margin-bottom class="dummy">
+
+        <!-- // table // -->
+        <ion-list *ngIf="show_table" >
+          <div class="rows">
+            <div class="lab">
+              <ion-icon name="ios-calendar"></ion-icon>
+            </div>
+            <div class="inp" *ngIf="tableLength">
+              <ion-select placeholder="Select Table" [(ngModel)]="tableName" (ionChange)="getBusiness(tableName)">
+                <div *ngFor="let data of table;let i = index">
+                  <ion-option value="{{data.table}}">{{data.table_name}}</ion-option>
+                </div>
+              </ion-select>
+            </div>
+            <div class="inp2" *ngIf="!tableLength" (click)="tableEmpty()">
+              <h6 style="font-size: 1.4rem;
+              padding-top: 16px;
+              padding-left: 7px;">Select Table</h6>
+            </div>
+          </div>
+        </ion-list>
+
+        <!-- // Business Category // -->
+        <!-- <ion-item>
+        <ion-label>
+          <ion-icon name="ios-briefcase"></ion-icon>
+        </ion-label>
+        //<ion-select placeholder="Select Business Category" [(ngModel)]="businessName" (ionChange)="businessCheck(businessName)">
+        //    <div *ngFor="let data of business;let i = index">
+        //      <ion-option value="{{data.id}}">{{data.category}}</ion-option>
+        //    </div>
+          </ion-select>
+        <select-searchable class="uplo" item-content placeholder="Business Category" [(ngModel)]="businessName"
+          [items]="business" itemValueField="id" itemTextField="category" [canSearch]="true" (onChange)="businessCheck(businessName)">
+        </select-searchable>
+      </ion-item> -->
+        <ion-list class="dummy">
+          <div class="rows">
+            <div class="lab">
+              <ion-icon name="ios-briefcase"></ion-icon>
+            </div>
+            <div class="inp">
+              <select-searchable class="" item-content placeholder="Business Category" [(ngModel)]="businessName"
+                [items]="business" itemValueField="id" itemTextField="category" [canSearch]="true"
+                (onChange)="businessCheck(businessName)">
+              </select-searchable>
+            </div>
+          </div>
+        </ion-list>
+
+
+      </ion-list>
+
+      <div class="termsDiv">
+
+        <div class="checkBox">
+          <ion-checkbox (ionChange)="updateCucumber()" [(ngModel)]="acceptTerms"></ion-checkbox>
+        </div>
+        <div class="terms">
+          <p>Accept Our <a (click)="openMod($event)">Terms And Conditions</a></p>
+        </div>
+
+        <!-- <ion-item> -->
+        <!-- </ion-item> -->
+      </div>
+
+      <div class="login-button">
+        <button ion-button type="submit" (click)="register()" [disabled]="disable_register">Register Now</button>
+        <!-- (click)="register()" [disabled]="disable_register" -->
+        <!-- (click)="pay()" -->
+      </div>
+
+      <!-- </div> -->
+
+
+
+      <p class="nav">Already have an account?</p>
+      <!-- <b (click)="login()">Signin Here</b> -->
+
+      <div class="login-button">
+        <button ion-button (click)="login()">Signin Here</button>
+      </div>
+      <!-- </ion-list> -->
+      <!-- </div> -->
+    </ion-list>
+
+  </div>
+</ion-content>

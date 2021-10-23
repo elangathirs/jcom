@@ -1,0 +1,343 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>DashBoard</ion-title>
+
+    <img class="grade" *ngIf="show_batch_img" [src]="imgpath" (click)="memberscorePage()" />
+  </ion-navbar>
+</ion-header> 
+
+<ion-content>
+  <div class="banner" >
+    <img src="assets/imgs/es-dummy2.png" alt="">
+  </div>
+
+  <div class="profile">
+    <div class="start">
+      <ion-icon name="ios-contacts" (click)="profile()"></ion-icon>
+      <p>Profile</p>
+    </div>
+    <div class="middle" *ngFor="let item of profiledata">
+      <img src="https://admin.jcombiz.com/{{item.profile_photo}}" alt="">
+      <p>{{membername}}</p>
+    </div>
+    <div class="end">
+      <ion-icon name="ios-stats" (click)="stats()"></ion-icon>
+      <p>JCOM Stats</p>
+    </div>
+  </div>
+
+  <div class="overlap">
+
+    <ion-segment [(ngModel)]="selectedSegment" (ionChange)="onSegmentChanged($event)" scrollY="true">
+
+      <ion-segment-button value="first">
+        My Week Stats
+      </ion-segment-button>
+      <ion-segment-button value="second">
+        <marquee behavior="" direction="">My Current Period Stats</marquee>
+
+      </ion-segment-button>
+      <ion-segment-button value="third">
+        My Over All Stats
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-slides #mySlider (ionSlideDidChange)="onSlideChanged($event)">
+      <!-- ===================== -->
+      <ion-slide>
+        <div class="row">
+          <div class="left">
+            <p>
+              Connect Given
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{cg1}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Connect Received
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{cr1}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Gnote Given
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              &#8377; {{gg1}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Gnote Received
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              &#8377; {{gr1}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              <!-- You & Me -->
+              Showcase
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{ym1}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Guests
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{g1}}
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+      <!-- ===================== -->
+      <ion-slide>
+        <div class="row">
+          <div class="left">
+            <p>
+              Connect Given
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{cg2}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Connect Received
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{cr2}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Gnote Given
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              &#8377; {{gg2}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Gnote Received
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              &#8377; {{gr2}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              <!-- You & Me -->
+              Showcase
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{ym2}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Guests
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{g2}}
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+      <!-- ===================== -->
+      <ion-slide>
+        <div class="row">
+          <div class="left">
+            <p>
+              Connect Given
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{cg3}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Connect Received
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{cr3}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Gnote Given
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              &#8377; {{gg3}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Gnote Received
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              &#8377; {{gr3}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              <!-- You & Me -->
+              Showcase
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{ym3}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p>
+              Guests
+            </p>
+          </div>
+          <div class="right">
+            <p class="green">
+              {{g3}}
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="jib-flex">
+      <div class="jib-option" (click)="connect()">
+        <span>
+          <ion-icon name="ios-person-add"></ion-icon>
+        </span>
+        <p>CONNECT</p>
+      </div>
+
+      <div class="jib-option" (click)="gnote()">
+        <span class="coin">
+          <p class=""> &#8377;</p>
+        </span>
+        <p>GNOTE</p>
+      </div>
+    </div>
+
+    <div class="jib-flex">
+
+      <!-- <div class="jib-option" (click)="you()">
+        <span>
+          <ion-icon name="ios-people"></ion-icon>
+        </span>
+        <p>YOU & ME</p>
+      </div> -->
+
+      <div class="jib-option" (click)="Showcase()">
+        <span>
+          <ion-icon name="ios-images"></ion-icon>
+        </span>
+        <p>SHOWCASE</p>
+      </div>
+
+      <div class="jib-option" (click)="guest()">
+        <span>
+          <ion-icon name="ios-man-outline"></ion-icon>
+        </span>
+        <p style="font-size: 1.2rem;">GUEST</p>
+      </div>
+    </div>
+    <!-- <div class="flex">
+      <div class="box" (click)="connect()">
+        <ion-icon name="ios-person-add"></ion-icon>
+        <p>CONNECT</p>
+      </div>
+      <div class="box" (click)="gnote()">
+        <p class="rs"> &#8377;</p>
+        <p>GNOTE</p>
+      </div>
+    </div> -->
+
+    <!-- <div class="flex">
+      <div class="box" (click)="you()">
+        <ion-icon name="ios-people"></ion-icon>
+        <p>YOU & ME</p>
+      </div>
+      <div class="box" (click)="guest()">
+        <ion-icon name="ios-man-outline"></ion-icon> 
+        <p>GUEST</p>
+      </div>
+    </div> -->
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="overlap" >
+
+
+    <p class="labl">Address</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Address" [(ngModel)] = "address" >
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <p class="labl">Business Information</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Business Information" [(ngModel)] = "info" >
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <p class="labl">Business Keywords</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Business Keywords" [(ngModel)] = "keyword" >
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+    <p class="labl">Products</p>
+    <ion-card class="txt-ar">
+      <ion-item>
+        <ion-textarea placeholder="Type Your Business Product" [(ngModel)] = "product" >
+        </ion-textarea>
+      </ion-item>
+    </ion-card>
+
+  </div>
+
+  <div class="conf-btn">
+      <button ion-button (click)="save()">
+        Save
+      </button>
+    </div>
+
+</ion-content>

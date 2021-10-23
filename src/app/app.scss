@@ -1,0 +1,149 @@
+@font-face{
+    font-family: jib1;
+    src: url('../assets/fonts/jib1.woff2');
+}
+*{
+    font-family: jib1;
+}
+body{
+    font-family: jib1 !important;
+}
+
+// ion-app.cameraView, ion-app.cameraView ion-content, ion-app.cameraView .nav-decor {
+//     background: transparent none !important;
+//   }
+    
+    .content-ios {
+        color: #fff;
+        background-color: #1e4b60;
+    }
+    .toolbar-background-ios {
+        border-color: transparent;
+        // background: #ffffff21;
+        background-color: #3f6577;
+    }
+    .toolbar-title-ios {
+        padding: 0 12px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        min-height: 45px;
+    }
+    .bar-button-default-ios, .bar-button-clear-ios-default, .bar-button-ios-default {
+        color: #fff;
+        background-color: transparent;
+    }
+
+
+    /////////////////////////////side navigation
+    .item-ios {
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: none;
+        color: #fff;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+    //////////////////////////side menu
+    .striff{
+        text-align: center;
+    }
+    .striff img{
+        width: 100px;
+        text-align: center;
+        margin: 8px 0;
+        min-width: 150px;
+        min-height: 45px;
+    }
+
+    .side-row{
+        display: flex;
+        padding: 10px 10px;
+        margin: 2px 10px;
+        border-bottom: 1px solid;
+    }
+    .ic{
+        font-size: 1.8rem;
+        width: 18px;
+    }
+    .side-option{
+        font-size: 1.8rem;
+        padding-left: 15px;
+    }
+    .side-rs{
+        font-size: large;
+        padding: 0px 4px;
+        margin: 0;
+        font-weight: 500;
+    }
+    .side-fot{
+        // position: absolute;
+        bottom: 10px;
+        text-align: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+    .account{
+        margin: 0;
+        padding: 5px 0;
+        color: orange;
+    }
+    .side-fot button{
+        background-color: orange;
+    }
+    .ey-ic{
+        // float: right;
+        width: 15%;
+        padding-top: 10px;
+
+    }
+    .ey-ic img{
+        width:40px !important; 
+    }
+    .title{
+        width: 85%;
+    }
+
+
+    //////////////////////////////late edit
+    .select-searchable {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 100%;
+    }
+
+
+    /////////////////28.02.2019
+    .uplo{
+        text-align: left !important;
+        padding-left: 18px; 
+    }
+    .uplo .button-inner {
+        width: 100%;
+        height: 0% !important;
+    }
+    .uplo 
+    .item-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        /* width: 100%; */
+        height: 0%;
+        background: transparent;
+        cursor: pointer;
+    }
+    

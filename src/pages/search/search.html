@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search members</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div class="flex">
+    <button ion-button (click)="choose(false)" >Search By Business</button>
+    <button ion-button (click)="choose(true)" >Seach By Keyword</button>
+  </div>
+
+  <div class="rows" *ngIf='!keyword'>
+    <div class="lab">
+      <ion-icon name="ios-briefcase"></ion-icon>
+    </div>
+    <div class="inp">
+      <select-searchable class="uplo" item-content placeholder=" Choose Business Category" [(ngModel)]="buisness"
+        [items]="buisnessdata" itemValueField="id" itemTextField="category" [canSearch]="true"
+        (onChange)="select(buisness)">
+      </select-searchable>
+    </div>
+  </div>
+
+  <div *ngIf="hide"  >
+    <div  *ngIf='!keyword'>
+    <div *ngFor="let item of buisness_members" >
+      <ion-card (click)="modal(
+              bc?.value,mn?.value,email?.value,web?.value,con?.value,state?.value,zone?.value,city?.value,lom?.value,jt?.value,
+              add?.value,dis?.value,pin?.value,dp?.value,bi?.value,bk?.value,pro?.value,nc?.value,name?.value,bn?.value
+            )">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://admin.jcombiz.com/{{item.profile_photo}}">
+          </ion-avatar>
+
+          <div class="row">
+            <div class="title">
+              <h2>{{item.name}}</h2>
+              <p>{{item.business_name}}</p>
+            </div>
+            <div class="ey-ic">
+              <img src="assets/imgs/ey-ic.png" alt="">
+            </div>
+          </div>
+
+        </ion-item>
+
+        <ion-textarea style="display: none;" value="{{item.business_category}}" #bc></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.p_mobile_no}}" #mn></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.p_email_id}}" #email></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.website}}" #web></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.country}}" #con></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.state}}" #state></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.zone}}" #zone></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.city}}" #city></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.lom}}" #lom></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.jib_table}}" #jt></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.address}}" #add></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.district}}" #dis></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.pincode}}" #pin></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.profile_photo}}" #dp></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.business_info}}" #bi></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.business_keywords}}" #bk></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.products}}" #pro></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.needed_contacts}}" #nc></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.name}}" #name></ion-textarea>
+        <ion-textarea style="display: none;" value="{{item.business_name}}" #bn></ion-textarea>
+      </ion-card>
+    </div>
+  </div>
+  </div>
+
+  <div class="se-key" *ngIf="keyword">
+
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" class="rough" [(ngModel)]='searchKeyword' placeholder="Search Keyword" value=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <button (click)="searchKey()" ion-button>Search By Keyword</button>
+
+  </div>
+
+
+
+
+</ion-content>

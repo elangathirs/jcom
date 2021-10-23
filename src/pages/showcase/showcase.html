@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Showcase</ion-title>
+    <div class="ic" (click)="hshow()">
+      <ion-icon name="list-box"></ion-icon>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-calendar"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item no-lines>
+        <!-- [readonly]=true -->
+        <!-- <ion-input type="date" placeholder="Date" [(ngModel)]="date"></ion-input> -->
+        <ion-datetime placeholder="Date" displayFormat="DD/M/YYYY" [(ngModel)]="date" min="1999" max="2025">
+        </ion-datetime>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-paper"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item no-lines>
+        <!-- [readonly]=true -->
+        <ion-input type="text" placeholder="Title" [(ngModel)]="title"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="rows">
+    <div class="lab">
+      <ion-icon name="ios-paper"></ion-icon>
+    </div>
+    <div class="inp">
+      <ion-item no-lines>
+        <ion-select [(ngModel)]="mode" placeholder="Mode">
+          <div *ngFor="let data of mode_data; let i = index">
+            <ion-option value="{{data.mode}}">{{data.mode}}</ion-option>
+          </div>
+        </ion-select>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="conf-btn" text-center>
+    <button ion-button block (click)="confirm()">
+      Save
+    </button>
+  </div>
+
+</ion-content>
